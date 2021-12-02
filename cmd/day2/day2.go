@@ -20,9 +20,6 @@ func calculatePosition(commands []util.Command) int {
 			depth += c.Amount
 		}
 	}
-	if depth < 0 {
-		depth *= -1
-	}
 	position := horizontal * depth
 	return position
 }
@@ -39,9 +36,6 @@ func calculatePositionWithAim(commands []util.Command) int {
 		case util.Down:
 			aim += c.Amount
 		}
-	}
-	if depth < 0 {
-		depth *= -1
 	}
 	position := horizontal * depth
 	return position
