@@ -43,7 +43,7 @@ type Command struct {
 	Amount    int
 }
 
-func ReadFileCommandsIntoIntArray(filename string) ([]Command, error) {
+func ReadFileCommandsIntoArray(filename string) ([]Command, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)

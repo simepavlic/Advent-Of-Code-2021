@@ -49,7 +49,7 @@ func calculatePositionWithAim(commands []util.Command) int {
 
 func main() {
 	absPath, _ := filepath.Abs("input.txt")
-	commands, err := util.ReadFileCommandsIntoIntArray(absPath)
+	commands, err := util.ReadFileCommandsIntoArray(absPath)
 	if err != nil {
 		log.Fatal(err)
 	}
