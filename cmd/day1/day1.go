@@ -19,7 +19,7 @@ func countMeasurementsSlidingWindow(window int, depths []int) int {
 
 func main() {
 
-	depths, err := util.ReadFileIntoIntArray("input/input1.txt")
+	depths, err := util.ReadFileIntoIntArray("input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
