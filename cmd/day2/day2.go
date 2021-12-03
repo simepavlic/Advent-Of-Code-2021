@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"path/filepath"
 
 	"github.com/simepavlic/advent-of-code-2021/internal/util"
 )
@@ -42,8 +41,7 @@ func calculatePositionWithAim(commands []util.Command) int {
 }
 
 func main() {
-	absPath, _ := filepath.Abs("input.txt")
-	commands, err := util.ReadFileCommandsIntoArray(absPath)
+	commands, err := util.ReadFileCommandsIntoArray("input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -75,3 +75,19 @@ func ReadFileCommandsIntoArray(filename string) ([]Command, error) {
 
 	return elements, scanner.Err()
 }
+
+func ReadBinaryIntoStringArray(filename string) ([]string, error) {
+	file, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	elements := make([]string, 0)
+	for scanner.Scan() {
+		elements = append(elements, scanner.Text())
+	}
+
+	return elements, scanner.Err()
+}
